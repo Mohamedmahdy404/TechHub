@@ -11,4 +11,8 @@
     <ProjectReference Include="..\TechHub.Infrastructure\TechHub.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Middlewares\" />
+  </ItemGroup>
+
 </Project>
