@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TechHub.Application\TechHub.Application.csproj" />
+    <ProjectReference Include="..\TechHub.Infrastructure\TechHub.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
