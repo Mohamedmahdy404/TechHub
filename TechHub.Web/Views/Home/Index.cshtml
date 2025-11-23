@@ -1,8 +1,293 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+    ViewData["Title"] = "TechHub - Premium Electronics & Gadgets";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- ========== HERO SECTION ========== -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="row align-items-center gap-5">
+            <div class="col-12">
+                <div class="hero-content">
+                    <h1>The Future of Tech</h1>
+                    <p>Experience cutting-edge electronics and premium gadgets with unbeatable prices and world-class service.</p>
+                    <div class="hero-buttons">
+                        <a href="@Url.Action("Index", "Products")" class="btn-primary-custom">Shop Now</a>
+                        <button class="btn-secondary-custom">Learn More</button>
+                    </div>
+                    <div style="font-size: 0.95rem; color: var(--text-secondary);">
+                        <i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Free Shipping Worldwide
+                        <br>
+                        <i class="fas fa-check-circle" style="color: var(--primary-color);"></i> 2-Year Warranty
+                        <br>
+                        <i class="fas fa-check-circle" style="color: var(--primary-color);"></i> 24/7 Customer Support
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FEATURED PRODUCTS ========== -->
+<section class="featured" id="products">
+    <div class="container">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="row g-4">
+            <!-- Product 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="product-card">
+                    <div style="position: relative;">
+                        <span class="product-badge">New</span>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/200x150?text=Wireless+Earbuds" alt="Wireless Earbuds">
+                        </div>
+                    </div>
+                    <h3 class="product-title">ProSound X1 Earbuds</h3>
+                    <p class="product-description">🔊 Premium audio • 🔋 40h battery • 🎙️ Noise cancelling</p>
+                    <div class="product-rating">
+                        <span class="star">★★★★★</span>
+                        <span class="rating-text">(248 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$129.99</span>
+                        <span class="price-original">$199.99</span>
+                        <span class="discount-badge">-35%</span>
+                    </div>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="product-card">
+                    <div style="position: relative;">
+                        <span class="product-badge">Bestseller</span>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/200x150?text=Smart+Watch" alt="Smart Watch">
+                        </div>
+                    </div>
+                    <h3 class="product-title">SmartFit Pro Watch</h3>
+                    <p class="product-description">⌚ AMOLED display • 💓 Health tracking • 🏃 Sports modes</p>
+                    <div class="product-rating">
+                        <span class="star">★★★★★</span>
+                        <span class="rating-text">(512 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$249.99</span>
+                        <span class="price-original">$349.99</span>
+                        <span class="discount-badge">-28%</span>
+                    </div>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="product-card">
+                    <div style="position: relative;">
+                        <span class="product-badge">Hot Deal</span>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/200x150?text=4K+Camera" alt="4K Camera">
+                        </div>
+                    </div>
+                    <h3 class="product-title">CineMax 4K Camera</h3>
+                    <p class="product-description">📹 8K recording • 🌙 Night mode • 🎬 AI editing</p>
+                    <div class="product-rating">
+                        <span class="star">★★★★☆</span>
+                        <span class="rating-text">(189 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$899.99</span>
+                        <span class="price-original">$1,299.99</span>
+                        <span class="discount-badge">-30%</span>
+                    </div>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="product-card">
+                    <div style="position: relative;">
+                        <span class="product-badge">Premium</span>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/200x150?text=Gaming+Headset" alt="Gaming Headset">
+                        </div>
+                    </div>
+                    <h3 class="product-title">RogueGear Pro Headset</h3>
+                    <p class="product-description">🎮 Surround sound • 🎧 Wireless • 🔊 7.1 Audio</p>
+                    <div class="product-rating">
+                        <span class="star">★★★★★</span>
+                        <span class="rating-text">(406 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$179.99</span>
+                        <span class="price-original">$249.99</span>
+                        <span class="discount-badge">-28%</span>
+                    </div>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="product-card">
+                    <div style="position: relative;">
+                        <span class="product-badge">Latest</span>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/200x150?text=Laptop+Stand" alt="Laptop Stand">
+                        </div>
+                    </div>
+                    <h3 class="product-title">ErgoStand Pro</h3>
+                    <p class="product-description">🖥️ Adjustable • 💼 Portable • ⚙️ All devices</p>
+                    <div class="product-rating">
+                        <span class="star">★★★★☆</span>
+                        <span class="rating-text">(143 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$49.99</span>
+                        <span class="price-original">$79.99</span>
+                        <span class="discount-badge">-37%</span>
+                    </div>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="product-card">
+                    <div style="position: relative;">
+                        <span class="product-badge">Exclusive</span>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/200x150?text=Power+Bank" alt="Power Bank">
+                        </div>
+                    </div>
+                    <h3 class="product-title">UltraCharge 20K</h3>
+                    <p class="product-description">🔋 100W fast charge • ⚡ 20000mAh • 🌍 Global ready</p>
+                    <div class="product-rating">
+                        <span class="star">★★★★★</span>
+                        <span class="rating-text">(891 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$69.99</span>
+                        <span class="price-original">$119.99</span>
+                        <span class="discount-badge">-41%</span>
+                    </div>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CATEGORIES ========== -->
+<section class="categories" id="categories">
+    <div class="container">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <a href="@Url.Action("Index", "Products", new { category = "smartphones" })" class="category-item text-decoration-none">
+                    <div class="category-icon"><i class="fas fa-smartphone"></i></div>
+                    <div class="category-name">Smartphones</div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="@Url.Action("Index", "Products", new { category = "laptops" })" class="category-item text-decoration-none">
+                    <div class="category-icon"><i class="fas fa-laptop"></i></div>
+                    <div class="category-name">Laptops</div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="@Url.Action("Index", "Products", new { category = "audio" })" class="category-item text-decoration-none">
+                    <div class="category-icon"><i class="fas fa-headphones"></i></div>
+                    <div class="category-name">Audio Devices</div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="@Url.Action("Index", "Products", new { category = "cameras" })" class="category-item text-decoration-none">
+                    <div class="category-icon"><i class="fas fa-camera"></i></div>
+                    <div class="category-name">Cameras</div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="@Url.Action("Index", "Products", new { category = "gaming" })" class="category-item text-decoration-none">
+                    <div class="category-icon"><i class="fas fa-gamepad"></i></div>
+                    <div class="category-name">Gaming Gear</div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="@Url.Action("Index", "Products", new { category = "accessories" })" class="category-item text-decoration-none">
+                    <div class="category-icon"><i class="fas fa-plug"></i></div>
+                    <div class="category-name">Accessories</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== SPECS & FEATURES SECTION ========== -->
+<section class="specs-section" id="specs">
+    <div class="container">
+        <h2 class="section-title">Why Choose TechHub?</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="spec-item">
+                    <div class="spec-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="spec-content">
+                        <h4>Lightning Fast Delivery</h4>
+                        <p>Get your orders delivered within 24-48 hours with real-time tracking and zero damage guarantee.</p>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="spec-content">
+                        <h4>Secure & Authentic</h4>
+                        <p>100% authentic products with certificate of authenticity and secure payment options.</p>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon"><i class="fas fa-undo"></i></div>
+                    <div class="spec-content">
+                        <h4>Easy Returns</h4>
+                        <p>30-day hassle-free returns and exchange policy with full refund guarantee.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="spec-item">
+                    <div class="spec-icon"><i class="fas fa-headset"></i></div>
+                    <div class="spec-content">
+                        <h4>Expert Support 24/7</h4>
+                        <p>Round-the-clock customer support via chat, email, and phone in multiple languages.</p>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon"><i class="fas fa-gift"></i></div>
+                    <div class="spec-content">
+                        <h4>Exclusive Deals</h4>
+                        <p>Access member-only discounts, flash sales, and early access to new products.</p>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon"><i class="fas fa-crown"></i></div>
+                    <div class="spec-content">
+                        <h4>Premium Quality</h4>
+                        <p>Curated collection of premium electronics from world-renowned brands.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        // Add to cart button functionality
+        document.querySelectorAll('.btn-add-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const productTitle = this.closest('.product-card').querySelector('.product-title').textContent;
+                alert(`✅ ${productTitle} added to cart!`);
+            });
+        });
+    </script>
+}
