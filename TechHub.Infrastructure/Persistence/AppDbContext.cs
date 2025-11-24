@@ -4,10 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TechHub.Domain.Entities;
+using TechHub.Infrastructure.Configurations;
 
 namespace TechHub.Infrastructure.Persistence
 {
-    internal class AppDbContext: IdentityDbContext
+    public class AppDbContext: IdentityDbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options): base(options)
         {
