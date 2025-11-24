@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TechHub.Domain.Entities;
-using TechHub.Infrastructure.Configurations.ProductConfiguration;
 
 namespace TechHub.Infrastructure.Persistence
 {

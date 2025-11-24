@@ -1,3 +1,9 @@
+using Identity.IdentityEntities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using System;
+using TechHub.Infrastructure.Persistence;
+
 namespace TechHub.Web
 {
     public class Program
@@ -8,6 +14,33 @@ namespace TechHub.Web
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            #region DBContextConfiguration
+            var ConnectionString = builder.Configuration.GetConnectionString("TechHub");
+            builder.Services.AddDbContext<AppDbContext>(
+                options =>
+                {
+                    options
+                        .UseSqlServer(ConnectionString)
+                        .LogTo(Console.WriteLine, LogLevel.Information);
+                });
+            #endregion
+
+
+            #region IdentifyConfiguration
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            {
+                options.Password.RequireDigit = true;
+                //options.Password.RequiredLength = 6;
+                //options.Password.RequireNonAlphanumeric = false;
+                //options.Password.RequireUppercase = false;
+                //options.Password.RequireLowercase = false;
+                options.User.RequireUniqueEmail = true; 
+            })
+                .AddRoles<IdentityRole>()  // Enable role-based authorization
+                .AddEntityFrameworkStores<AppDbContext>() 
+                .AddDefaultTokenProviders();
+            #endregion
 
             var app = builder.Build();
 

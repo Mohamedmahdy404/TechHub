@@ -16,6 +16,6 @@ namespace TechHub.Domain.Entities
         public ProductCategory ProductCategory { get; set; }    
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; }
-        public float[]? VectorEmbedding { get; set; } = Array.Empty<float>();
+        public float[]? VectorEmbedding { get; set; } 
     }
 }

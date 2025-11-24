@@ -26,12 +26,10 @@ namespace TechHub.Infrastructure.Configurations
                    .HasColumnType("decimal(18,2)");
 
             builder.Property(p => p.StockQuantity)
-                   .IsRequired(false)
                    .HasDefaultValue(0);
 
             builder.Property(p => p.VectorEmbedding)
-                   .HasColumnType("vector(384)")
-                   .IsRequired(false);
+                   .HasColumnType("vector(384)");
 
             builder.Property(p => p.CreatedAt)
                 .HasDefaultValueSql("GETUTCDATE()");
@@ -42,6 +40,8 @@ namespace TechHub.Infrastructure.Configurations
 
             builder.Property(p => p.ProductCategory)
                 .HasConversion<string>();
+
+
         }
     }
 }
