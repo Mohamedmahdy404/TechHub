@@ -7,15 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Identity\Identity.csproj" />
     <ProjectReference Include="..\TechHub.Application\TechHub.Application.csproj" />
     <ProjectReference Include="..\TechHub.Domain\TechHub.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="ExternalServices\" />
-    <Folder Include="Configurations\" />
     <Folder Include="Repositories\" />
-    <Folder Include="Persistence\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
