@@ -17,13 +17,8 @@ namespace TechHub.Web
 
             #region DBContextConfiguration
             var ConnectionString = builder.Configuration.GetConnectionString("TechHub");
-            builder.Services.AddDbContext<AppDbContext>(
-                options =>
-                {
-                    options
-                        .UseSqlServer(ConnectionString)
-                        .LogTo(Console.WriteLine, LogLevel.Information);
-                });
+            builder.Services.AddDbContext<AppDbContext>(options =>
+                 options.UseSqlServer(ConnectionString));
             #endregion
 
 
